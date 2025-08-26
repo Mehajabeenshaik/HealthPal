@@ -1,0 +1,40 @@
+{
+  "name": "HealthTip",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the health tip"
+    },
+    "content": {
+      "type": "string",
+      "description": "Content of the health tip"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "nutrition",
+        "exercise",
+        "mental_health",
+        "preventive_care",
+        "chronic_conditions",
+        "general"
+      ],
+      "description": "Category of the health tip"
+    },
+    "source": {
+      "type": "string",
+      "description": "Source of the information"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this tip should be featured"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "category"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Medication",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the medication"
+    },
+    "dosage": {
+      "type": "string",
+      "description": "Dosage information"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": [
+        "once_daily",
+        "twice_daily",
+        "three_times_daily",
+        "as_needed"
+      ],
+      "description": "How often to take the medication"
+    },
+    "time_of_day": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Times of day to take medication (e.g., '08:00', '20:00')"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "When to start taking the medication"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "When to stop taking the medication (optional)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the medication"
+    }
+  },
+  "required": [
+    "name",
+    "dosage",
+    "frequency"
+  ]
+}

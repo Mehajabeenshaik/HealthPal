@@ -1,0 +1,49 @@
+{
+  "name": "Appointment",
+  "type": "object",
+  "properties": {
+    "doctor_name": {
+      "type": "string",
+      "description": "Name of the healthcare provider"
+    },
+    "appointment_type": {
+      "type": "string",
+      "enum": [
+        "general_checkup",
+        "specialist",
+        "lab_work",
+        "follow_up",
+        "emergency",
+        "other"
+      ],
+      "description": "Type of appointment"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Appointment date"
+    },
+    "time": {
+      "type": "string",
+      "description": "Appointment time"
+    },
+    "location": {
+      "type": "string",
+      "description": "Clinic or hospital address"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notes about the appointment"
+    },
+    "reminder_sent": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether reminder notification was sent"
+    }
+  },
+  "required": [
+    "doctor_name",
+    "date",
+    "time"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Symptom",
+  "type": "object",
+  "properties": {
+    "symptoms_description": {
+      "type": "string",
+      "description": "User's description of symptoms"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "mild",
+        "moderate",
+        "severe"
+      ],
+      "description": "Severity of symptoms"
+    },
+    "duration": {
+      "type": "string",
+      "description": "How long symptoms have been present"
+    },
+    "ai_analysis": {
+      "type": "string",
+      "description": "AI-generated analysis and recommendations"
+    },
+    "possible_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of possible conditions suggested by AI"
+    },
+    "recommendation": {
+      "type": "string",
+      "description": "AI recommendation for next steps"
+    }
+  },
+  "required": [
+    "symptoms_description"
+  ]
+}

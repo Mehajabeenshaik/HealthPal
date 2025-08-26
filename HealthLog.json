@@ -1,0 +1,40 @@
+{
+  "name": "HealthLog",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the health log entry"
+    },
+    "mood_score": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 10,
+      "description": "Mood rating from 1 (very low) to 10 (excellent)"
+    },
+    "sleep_hours": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 24,
+      "description": "Hours of sleep"
+    },
+    "water_glasses": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Number of glasses of water consumed"
+    },
+    "exercise_minutes": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Minutes of exercise"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional health notes for the day"
+    }
+  },
+  "required": [
+    "date"
+  ]
+}
